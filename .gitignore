@@ -1,0 +1,16 @@
+.DS_Store
+
+Truffle/build
+Truffle/node_modules
+
+Docker-cluster/node-*/tessera/qdata/database
+Docker-cluster/node-*/tessera/qdata/tm.ipc
+Docker-cluster/node-*/quorum/qdata/quorum-raft-state
+Docker-cluster/node-*/quorum/qdata/raft-snap
+Docker-cluster/node-*/quorum/qdata/raft-wal
+Docker-cluster/node-*/quorum/qdata/geth/chaindata
+Docker-cluster/node-*/quorum/qdata/geth/lightchaindata
+Docker-cluster/node-*/quorum/qdata/geth.ipc
+Docker-cluster/node-*/quorum/qdata/geth/LOCK
+Docker-cluster/node-*/quorum/qdata/geth/transactions.rlp
+Docker-cluster/node-*/quorum/logs/*

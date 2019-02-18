@@ -1,0 +1,76 @@
+{
+  "useWhiteList": false,
+  "jdbc": {
+    "username": "privori",
+    "password": "privori",
+    "url": "jdbc:h2:/opt/tessera/qdata/database/db;MODE=Oracle;TRACE_LEVEL_SYSTEM_OUT=0",
+    "autoCreateTables": true
+  },
+  "serverConfigs": [
+    {
+      "app": "Q2T",
+      "enabled": true,
+      "serverSocket": {
+        "type": "INET",
+        "port": 9000,
+        "hostName": "http://0.0.0.0"
+      },
+      "communicationType": "GRPC"
+    },
+    {
+      "app": "P2P",
+      "enabled": true,
+      "serverSocket": {
+        "type": "INET",
+        "port": 9001,
+        "hostName": "http://tessera-2-ip-service"
+      },
+      "bindingAddress":"http://0.0.0.0:9001",
+      "communicationType": "GRPC"
+    },
+    {
+      "app":"ThirdParty",
+      "enabled": true,
+      "serverSocket":{
+        "type":"INET",
+        "port": 9002,
+        "hostName": "http://0.0.0.0"
+      },
+      "communicationType": "REST"
+    },
+    {
+      "app": "ADMIN",
+      "enabled": true,
+      "serverSocket": {
+        "type": "INET",
+        "port": 9003,
+        "hostName": "http://0.0.0.0"
+      },
+      "communicationType": "REST"
+    }
+  ],
+  "peer": [
+    {
+      "url": "tessera-1-ip-service:9001/"
+    },
+    {
+      "url": "tessera-2-ip-service:9001/"
+    }
+  ],
+  "keys": {
+    "passwords": [],
+    "keyData": [
+      {
+        "config": {
+          "data": {
+            "bytes": "v/55B/aOQAKoSbNTZMVqOY5jUATTSJFGSUx0PSe1NgU="
+          },
+          "type": "unlocked"
+        },
+        "publicKey": "0zH3T6YyX659rWOlrf3nvTxMaR1tMvhLtYMJxRAw3nA="
+      }
+    ]
+  },
+  "alwaysSendTo": [],
+  "unixSocketFile": "/opt/tessera/qdata/tm.ipc"
+}

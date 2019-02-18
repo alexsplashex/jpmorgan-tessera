@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tessera-1-ip-service
+spec:
+  type: ClusterIP 
+  selector:
+    io.kompose.service: tessera-1
+  ports:
+  - name:  tessera-1 
+    port: 9000
+    protocol: TCP
+    targetPort: 9000

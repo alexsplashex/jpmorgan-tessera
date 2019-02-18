@@ -1,0 +1,18 @@
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   creationTimestamp: null
+#   labels:
+#     io.kompose.service: tessera-1-claim0
+#   name: tessera-1-claim0
+# spec:
+#   accessModes:
+#   - ReadWriteOnce
+#   resources:
+#     requests:
+#       storage: 200Mi
+#   # hostPath: 
+#   #   path: "/Users/lesha/privori-quorum-k8s/Docker-cluster/node-1/tessera/qdata"
+# status: {}
+
+
